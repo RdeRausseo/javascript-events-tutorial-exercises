@@ -5,16 +5,29 @@ window.onload = function loadFunction()
 {
 	// Here I set the screen to the initial value when the website is fully loaded
 	document.getElementById('screen').innerHTML = "The counter value is "+counter;
-}
 
 // Called when the user clicks
-window.increaseCounter = function increaseCounter()
-{
-	// Increase the global counter by one
-	counter++;
-	// Update the screen with the new value
-	document.getElementById('screen').innerHTML = "The counter value is "+counter;
-}
+	window.increaseCounter = function increaseCounter()
+	{
+		// Increase the global counter by one
+		counter++;
+		// Update the screen with the new value
+		document.getElementById('screen').innerHTML = "The counter value is "+counter;
+	}
 
 // Your code here
 
+	window.decreaseCounter = () => {
+		counter--; 
+		document.getElementById('screen').innerHTML = "The counter value is " + counter;
+	}
+
+	const buttonCreate = document.createElement("button"); 
+	buttonCreate.innerHTML = "disminuir";  
+
+	window.document.body.append(buttonCreate); 
+
+	buttonCreate.addEventListener('click', decreaseCounter); 
+
+	}
+// 

@@ -6,12 +6,10 @@ window.onload = function loadfn() {
 
 // Modify this function
 window.turnChanger = function turnChanger() {
-	if (currentUser.toLowerCase() == "mario") {
+	if (currentUser == "Mario") {
 		currentUser = "Juan";
-	} else if(currentUser.toLowerCase() == "juan") {
-		currentUser = "Josh";
-	} else{
-		currentUser = "Mario"
+	} else {
+		currentUser = "Mario";
 	}
 
 	document.getElementById("screen").innerHTML = "It's " + currentUser + "'s turn";
